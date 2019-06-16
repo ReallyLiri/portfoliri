@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Home from './Home'
 import Code from './Code'
 import Art from './Art'
+import Album from './Album'
 
 export const ColorScheme = {
   primary: 'red',
@@ -33,14 +34,28 @@ const ContainerDiv = styled.div`
 `;
 
 class App extends Component {
+
   render() {
+    const {s3} = this.props;
+
     return (
       <AppDiv>
         <ContainerDiv>
           <Router>
             <Route exact path='/' component={Home}/>
             <Route path='/code' component={Code}/>
-            <Route path='/art' component={Art}/>
+            <Route path='/art' render={props => (
+              <Art
+                {...props}
+                s3={s3}
+              />
+            )}/>
+            <Route path='/album/:album' render={props => (
+              <Album
+                {...props}
+                s3={s3}
+              />
+            )}/>
           </Router>
         </ContainerDiv>
       </AppDiv>

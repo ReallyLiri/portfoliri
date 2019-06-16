@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "font-awesome": "^4.7.0",
+    "aws-sdk": "^2.476.0",
+    "font-awesome": "4.7.0",
     "react": "16.8.6",
     "react-dom": "16.8.6",
     "react-router": "5.0.1",
