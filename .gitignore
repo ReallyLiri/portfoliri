@@ -1,0 +1,11 @@
+/node_modules
+
+.idea/workspace.xml
+.idea/tasks.xmlvenv
+
+/coverage
+/build
+
+.DS_Store
+yarn-debug.log*
+yarn-error.log*
