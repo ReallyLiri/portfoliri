@@ -30,7 +30,7 @@ class Album extends Component {
         console.log(data);
 
         const href = this.request.httpRequest.endpoint.href;
-        const bucketUrl = href.replace('//s3.', `//${bucketName}.s3.`) + '/' ;
+        const bucketUrl = href.replace('//s3.', `//${bucketName}.s3.`);
 
         self.images = data.Contents
           .filter(photo => photo.Key !== albumPhotosKey)
@@ -52,7 +52,9 @@ class Album extends Component {
           <span key={image.imageUrl}>
             <div>
               <br/>
-              <img style={{width: 128, height: 128}} src={image.imageUrl}/>
+              <a href={image.imageUrl}>
+                <img style={{width: '20%'}} src={image.imageUrl}/>
+              </a>
             </div>
             <div>
               <span>
