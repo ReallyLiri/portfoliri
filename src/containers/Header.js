@@ -36,9 +36,9 @@ class Header extends Component {
           <ProfileTitle>REALLY LIRI</ProfileTitle>
         </Link>
         <div>
-          <NavLink to='/'>ABOUT</NavLink>
+          <NavLink to='/about'>ABOUT</NavLink>
           <NavLink to='/code'>CODE</NavLink>
-          <NavLink to='/art'>ART</NavLink>
+          <NavLink to='/gallery'>GALLERY</NavLink>
         </div>
         <hr/>
       </HeaderDiv>

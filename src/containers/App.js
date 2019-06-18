@@ -1,18 +1,11 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Home from './Home'
+import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
+import About from './Home'
 import Code from './Code'
-import Art from './Art'
+import Gallery from './Gallery'
 import Album from './Album'
-
-export const ColorScheme = {
-  primary: 'red',
-  secondary: 'blue',
-  third: 'purple',
-  fourth: 'goldenrod'
-};
 
 const AppDiv = styled.div`
   display: flex;
@@ -35,25 +28,29 @@ const ContainerDiv = styled.div`
 
 class App extends Component {
 
+  componentDidMount() {
+    console.error(window.location.pathname);
+    if (window.location.pathname === '/') {
+      console.error("wat");
+    }
+  }
+
   render() {
-    const {s3} = this.props;
 
     return (
       <AppDiv>
         <ContainerDiv>
           <Router>
-            <Route exact path='/' component={Home}/>
-            <Route path='/code' component={Code}/>
-            <Route path='/art' render={props => (
-              <Art
+            <Route exact path='/' render={props => (
+              <Gallery
                 {...props}
-                s3={s3}
               />
             )}/>
+            <Route path='/about' component={About}/>
+            <Route path='/code' component={Code}/>
             <Route path='/album/:album' render={props => (
               <Album
                 {...props}
-                s3={s3}
               />
             )}/>
           </Router>

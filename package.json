@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "aws-sdk": "^2.476.0",
     "font-awesome": "4.7.0",
     "react": "16.8.6",
     "react-dom": "16.8.6",
@@ -16,7 +15,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "gallery": "pushd src/assets/gallery && python3 gallery-crawl.py && popd"
   },
   "eslintConfig": {
     "extends": "react-app"
