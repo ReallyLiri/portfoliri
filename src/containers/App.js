@@ -38,7 +38,7 @@ class App extends Component {
   render() {
 
     return (
-      <AppDiv>
+      <AppDiv style={{backgroundColor: 'gray'}}>
         <ContainerDiv>
           <Router>
             <Route exact path='/' render={props => (
@@ -53,6 +53,7 @@ class App extends Component {
                 {...props}
               />
             )}/>
+            <Redirect from="/" to="/" />
           </Router>
         </ContainerDiv>
       </AppDiv>

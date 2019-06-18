@@ -4,6 +4,7 @@ import Header from './Header.js'
 import Footer from './Footer.js'
 import { CenteredHeader } from './App.js'
 import { ALBUMS } from '../assets'
+import Gallery from "react-photo-gallery";
 
 class Album extends Component {
 
@@ -17,6 +18,13 @@ class Album extends Component {
     console.error(this.props);
 
     const images = ALBUMS[album].images;
+    const imagesGallery = images.map((image) => {
+      return {
+        src: image.src,
+        height: image.horizontal ? 3 : 4,
+        width: image.horizontal ? 4 : 3
+      }
+    });
 
     return (
       <div>
@@ -26,19 +34,10 @@ class Album extends Component {
           <button onClick={() => history.push('/')}>
             Back to albums list
           </button>
-          <ul>
-            {
-              images.map((image) =>
-                <li key={image}>
-                  <div>
-                    <br/>
-                    <a href={image}>
-                      <img style={{width: '20%', color: 'black'}} src={image} alt="wat"/>
-                    </a>
-                  </div>
-                </li>)
-            }
-          </ul>
+          <Gallery
+            photos={imagesGallery}
+            onClick={(event, obj) => window.open(imagesGallery[obj.index].src, "_self")}
+          />
         </div>
         <Footer/>
       </div>
