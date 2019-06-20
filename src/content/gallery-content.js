@@ -1,9 +1,3 @@
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import Albums from "../containers/Albums";
-import About from "../containers/Home";
-import Code from "../containers/Code";
-import Album from "../containers/Album";
-import React from "react";
 
 export const ALBUMS = {
 

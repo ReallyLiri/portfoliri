@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
-import About from './Home'
+import About from './About'
 import Code from './Code'
 import Albums from './Albums'
 import Album from './Album'
+import { ColorScheme } from "../theme/colorScheme";
 
 const AppDiv = styled.div`
   display: flex;
@@ -21,9 +22,12 @@ export const CenteredHeader = styled.h4`
 
 
 const ContainerDiv = styled.div`
-  margin: 1% 17% 3% 17%;
+  margin: 3% 17% 3% 17%;
+  padding: 5px;
   flex: 1;
   font-family: 'Open Sans', sans-serif;
+  background-color: ${ColorScheme.lighter};
+  border-radius: 15px;
 `;
 
 class App extends Component {
@@ -38,7 +42,7 @@ class App extends Component {
   render() {
 
     return (
-      <AppDiv style={{backgroundColor: 'gray'}}>
+      <AppDiv style={{backgroundColor: ColorScheme.dark}}>
         <ContainerDiv>
           <Router>
             <Switch>

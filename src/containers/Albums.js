@@ -17,7 +17,7 @@ class Albums extends Component {
     return (
       <div>
         <Header/>
-        <StackGrid columnWidth={250}>
+        <StackGrid columnWidth={250} monitorImagesLoaded={true}>
           {
             Object.entries(ALBUMS).map((pair) =>
               <button
@@ -31,6 +31,10 @@ class Albums extends Component {
             )
           }
         </StackGrid>
+        <img
+          src={require('../assets/footer.png')} alt={'bottom'}
+          style={{width: '100%', marginTop: 50, borderRadius: 15}}
+        />
         <Footer/>
       </div>
     );

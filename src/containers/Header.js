@@ -1,39 +1,29 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import styled from 'styled-components';
+import { ColorScheme } from "../theme/colorScheme";
 
-const ProfileImage = styled.img`
-  width: 12em;
-  height: 12em;
-  border-radius: 50%;
-`;
-
-const ProfileTitle = styled.h1`
-  color: black;
-`;
-
-const HeaderDiv = styled.div`
-  padding-top: 5vh;
-  text-align: center;
-  font-family: 'Zilla Slab Highlight', sans-serif;
-  color: black;
-`;
 
 const NavLink = styled(Link)`
   display: inline-flex;
   margin: 0 5px;
-  color: black;
-  font-size: 16px;
+  color: ${ColorScheme.dark};
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Arial;
+  background-color: ${ColorScheme.lighter};
 `;
 
 
 class Header extends Component {
   render() {
     return (
-      <HeaderDiv>
+      <div style={{textAlign: 'center'}}>
         <Link to="/">
-          <ProfileImage src={require('../assets/agg.jpg')} alt='Really Liri'/>
-          <ProfileTitle>REALLY LIRI</ProfileTitle>
+          <img
+            src={require('../assets/toptext.png')} alt='Really Liri'
+            style={{width: 600, marginBottom: 20}}
+          />
         </Link>
         <div>
           <NavLink to='/about'>ABOUT</NavLink>
@@ -41,7 +31,7 @@ class Header extends Component {
           <NavLink to='/'>GALLERY</NavLink>
         </div>
         <hr/>
-      </HeaderDiv>
+      </div>
     );
   }
 }
