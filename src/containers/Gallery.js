@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Header from './Header.js'
 import Footer from './Footer.js'
 import { CenteredHeader } from './App.js'
-import { ALBUMS } from '../assets'
+import { ALBUMS } from '../content/gallery-content'
 
 
 class Gallery extends Component {

@@ -17,7 +17,7 @@ class Album extends Component {
 
     console.error(this.props);
 
-    const {images} = ALBUMS[album];
+    const {images, rowHeight} = ALBUMS[album];
 
     return (
       <div>
@@ -28,6 +28,7 @@ class Album extends Component {
             Back to albums list
           </button>
           <Gallery
+            targetRowHeight={rowHeight}
             photos={images}
             onClick={(event, obj) => window.open(images[obj.index].src, "_self")}
           />
