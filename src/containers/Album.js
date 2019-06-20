@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Header from './Header.js'
 import Footer from './Footer.js'
 import { CenteredHeader } from './App.js'
-import { ALBUMS } from '../assets'
+import { ALBUMS } from '../content/gallery-content'
 import Gallery from "react-photo-gallery";
 
 class Album extends Component {
@@ -17,14 +17,7 @@ class Album extends Component {
 
     console.error(this.props);
 
-    const images = ALBUMS[album].images;
-    const imagesGallery = images.map((image) => {
-      return {
-        src: image.src,
-        height: image.horizontal ? 3 : 4,
-        width: image.horizontal ? 4 : 3
-      }
-    });
+    const {images} = ALBUMS[album];
 
     return (
       <div>
@@ -35,8 +28,8 @@ class Album extends Component {
             Back to albums list
           </button>
           <Gallery
-            photos={imagesGallery}
-            onClick={(event, obj) => window.open(imagesGallery[obj.index].src, "_self")}
+            photos={images}
+            onClick={(event, obj) => window.open(images[obj.index].src, "_self")}
           />
         </div>
         <Footer/>
