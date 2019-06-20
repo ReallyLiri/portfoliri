@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 import About from './Home'
 import Code from './Code'
-import Gallery from './Gallery'
+import Albums from './Albums'
 import Album from './Album'
 
 const AppDiv = styled.div`
@@ -42,7 +42,7 @@ class App extends Component {
         <ContainerDiv>
           <Router>
             <Route exact path='/' render={props => (
-              <Gallery
+              <Albums
                 {...props}
               />
             )}/>
@@ -53,7 +53,6 @@ class App extends Component {
                 {...props}
               />
             )}/>
-            <Redirect from="/" to="/" />
           </Router>
         </ContainerDiv>
       </AppDiv>

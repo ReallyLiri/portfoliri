@@ -1,3 +1,10 @@
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Albums from "../containers/Albums";
+import About from "../containers/Home";
+import Code from "../containers/Code";
+import Album from "../containers/Album";
+import React from "react";
+
 export const ALBUMS = {
 
   'drawings': {
@@ -57,8 +64,8 @@ export const ALBUMS = {
     preview: 'https://i.imgur.com/RxJ46jc.png',
     rowHeight: 500,
     images: [
-      {src: 'https://i.imgur.com/aQeqndC.png', height: 68, width: 95},
-      {src: 'https://i.imgur.com/LYWlVfN.png', height: 29, width: 41}
+      {src: 'https://i.imgur.com/LYWlVfN.png', height: 29, width: 41},
+      {src: 'https://i.imgur.com/9jgDa9q.png', height: 68, width: 95}
     ]
   },
 
