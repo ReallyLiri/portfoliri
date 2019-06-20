@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 import About from './Home'
 import Code from './Code'
 import Albums from './Albums'
@@ -41,6 +41,7 @@ class App extends Component {
       <AppDiv style={{backgroundColor: 'gray'}}>
         <ContainerDiv>
           <Router>
+            <Switch>
             <Route exact path='/' render={props => (
               <Albums
                 {...props}
@@ -53,6 +54,8 @@ class App extends Component {
                 {...props}
               />
             )}/>
+            <Redirect to='/' />
+            </Switch>
           </Router>
         </ContainerDiv>
       </AppDiv>
