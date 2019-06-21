@@ -7,11 +7,14 @@ import { ColorScheme } from "../theme/colorScheme";
 const NavLink = styled(Link)`
   display: inline-flex;
   margin: 0 5px;
+  padding: 10px;
   color: ${ColorScheme.dark};
   font-size: 20px;
   font-weight: bold;
   font-family: Arial;
-  background-color: ${ColorScheme.lighter};
+  background-color: ${ColorScheme.darker};
+  border-radius: 15px;
+  text-decoration: none;
 `;
 
 
@@ -30,7 +33,15 @@ class Header extends Component {
           <NavLink to='/code'>CODE</NavLink>
           <NavLink to='/'>GALLERY</NavLink>
         </div>
-        <hr/>
+        <hr style={{
+          borderTop: 0,
+          margin: 10,
+          borderRadius: 15,
+          height: 5,
+          borderColor: ColorScheme.darker,
+          borderLeftColor: 'transparent',
+          backgroundColor: ColorScheme.darker
+        }}/>
       </div>
     );
   }

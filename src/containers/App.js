@@ -32,13 +32,6 @@ const ContainerDiv = styled.div`
 
 class App extends Component {
 
-  componentDidMount() {
-    console.error(window.location.pathname);
-    if (window.location.pathname === '/') {
-      console.error("wat");
-    }
-  }
-
   render() {
 
     return (

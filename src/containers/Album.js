@@ -15,8 +15,6 @@ class Album extends Component {
     const {history} = this.props;
     const {album} = this.props.match.params;
 
-    console.error(this.props);
-
     const {images, rowHeight} = ALBUMS[album];
 
     return (
