@@ -52,7 +52,7 @@ class Footer extends Component {
         </div>
         <div  style={{margin: 0}}>
           <div >
-            <p  style={{fontFamily: 'arial', fontSize: 8}}>© Liri Sokol - Since 1992</p>
+            <p  style={{fontFamily: 'arial', fontSize: 10}}>© Liri Sokol - Since 1992</p>
           </div>
         </div>
       </FooterDiv>

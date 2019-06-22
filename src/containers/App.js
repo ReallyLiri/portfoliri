@@ -3,10 +3,12 @@ import styled from 'styled-components';
 
 import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 import About from './About'
-import Code from './Code'
+import Proficiencies from './Proficiencies'
 import Albums from './Albums'
 import Album from './Album'
 import { ColorScheme } from "../theme/colorScheme";
+import Header from "./Header";
+import Footer from "./Footer";
 
 const AppDiv = styled.div`
   display: flex;
@@ -38,21 +40,27 @@ class App extends Component {
       <AppDiv style={{backgroundColor: ColorScheme.dark}}>
         <ContainerDiv>
           <Router>
+
+            <Header/>
+
             <Switch>
-            <Route exact path='/' render={props => (
-              <Albums
-                {...props}
-              />
-            )}/>
-            <Route path='/about' component={About}/>
-            <Route path='/code' component={Code}/>
-            <Route path='/album/:album' render={props => (
-              <Album
-                {...props}
-              />
-            )}/>
-            <Redirect to='/' />
+              <Route exact path='/' render={props => (
+                <Albums
+                  {...props}
+                />
+              )}/>
+              <Route path='/about' component={About}/>
+              <Route path='/prof' component={Proficiencies}/>
+              <Route path='/album/:album' render={props => (
+                <Album
+                  {...props}
+                />
+              )}/>
+              <Redirect to='/'/>
             </Switch>
+
+            <Footer/>
+
           </Router>
         </ContainerDiv>
       </AppDiv>

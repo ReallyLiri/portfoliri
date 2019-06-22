@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 
-import Header from './Header.js'
-import Footer from './Footer.js'
 import { CenteredHeader } from './App.js'
 import { ColorScheme } from "../theme/colorScheme";
 
@@ -9,7 +7,6 @@ class About extends Component {
   render() {
     return (
       <div>
-        <Header/>
         <CenteredHeader>Liri Sokol</CenteredHeader>
         <img src={require('../assets/liri.png')} alt={'liri'} style={{width: '100%', borderRadius: 15}}/>
         <div
@@ -29,7 +26,6 @@ class About extends Component {
             nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
             anim id est laborum.
           </p>
-          <Footer/>
         </div>
       </div>
     );

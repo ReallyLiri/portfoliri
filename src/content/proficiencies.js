@@ -1,43 +1,56 @@
-
 export const PROFICIENCIES = {
 
-  'Programming Languages': [
-    {name: 'C', devicon: 'c'},
+  'Backend Languages': [
+     {name: 'C', devicon: 'c'},
     {name: 'C++', devicon: 'cplusplus'},
     {name: 'C#', devicon: 'csharp'},
     {name: 'Java', devicon: 'java'},
-    {name: 'javascript', devicon: 'javascript'},
-    {name: 'TypeScript', devicon: 'typescript'},
     {name: 'Python', devicon: 'python'},
-    {name: 'Objective-C'}
+        {name: 'node.js', devicon: 'nodejs'},
   ],
 
-  'Frameworks': [
+  'Backend Libraries': [
     {name: '.NET', devicon: 'dot-net'},
-    {name: 'WPF'},
-    {name: 'Owin'},
-    {name: 'WCF'},
-    {name: 'Entity Framework'},
-    {name: 'Flask'},
-    {name: 'SQLAlchemy'},
-    {name: 'Pandas'},
+    {name: 'Owin', devicon: 'dot-net'},
+    {name: 'WCF', devicon: 'dot-net'},
+    {name: 'Entity Framework', devicon: 'dot-net'},
+    {name: 'Flask', devicon: 'python'},
+    {name: 'SQLAlchemy', devicon: 'python'},
+    {name: 'Pandas', devicon: 'python'},
+  ],
+
+  'Frontend Web': [
+    {name: 'javascript', devicon: 'javascript'},
+    {name: 'TypeScript', devicon: 'typescript'},
     {name: 'Angular', devicon: 'angularjs'},
     {name: 'React, RN, RNW', devicon: 'react'},
-    {name: 'node.js', devicon: 'nodejs'},
-    {name: 'Android', devicon: 'android'}
+  ],
+
+  'Frontend Desktop/Mobile': [
+    {name: 'WPF', devicon: 'dot-net'},
+    {name: 'Objective-C'},
+    {name: 'Android', devicon: 'android'},
+    {name: 'React-Native, RNW', devicon: 'react'},
+
+  ],
+
+  'Web Server': [
+    {name: 'NGINX', devicon: 'nginx'},
+    {name: 'uWSGI'}
   ],
 
   'Tools': [
-    {name: 'NGINX', devicon: 'nginx'},
-    {name: 'uWSGI'},
-    {name: 'Amazon Web Services', devicon: 'amazonwebservices'},
-    {name: 'Google Cloud', devicon: 'google'},
     {name: 'Docker', devicon: 'docker'},
-    {name: 'Kubernetes'},
     {name: 'Vagrant'},
     {name: 'git', devicon: 'git'},
-    {name: 'TFS'},
-    {name: 'bash'}
+    {name: 'TFS', devicon: 'visualstudio'},
+    {name: 'bash', devicon: 'linux'}
+  ],
+
+  'Cloud': [
+    {name: 'Amazon Web Services', devicon: 'amazonwebservices'},
+    {name: 'Google Cloud', devicon: 'google'},
+    {name: 'Kubernetes'}
   ],
 
   'Databases': [

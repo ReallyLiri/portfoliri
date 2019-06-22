@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 
-import Header from './Header.js'
-import Footer from './Footer.js'
 import { ColorScheme } from "../theme/colorScheme";
 import styled from "styled-components";
 import { PROFICIENCIES } from "../content/proficiencies";
@@ -38,6 +36,7 @@ const ProfContainer = styled.div`
   text-align: center;
   vertical-align: middle;
   padding: 5px;
+  margin-bottom: 30px;
 `;
 
 const icon = (props) => {
@@ -50,12 +49,10 @@ const icon = (props) => {
   )
 };
 
-class Code extends Component {
+class Proficiencies extends Component {
   render() {
     return (
       <div>
-        <Header/>
-
         {
           Object.entries(PROFICIENCIES).map((pair) => {
             return (
@@ -77,11 +74,9 @@ class Code extends Component {
             )
           })
         }
-
-        <Footer/>
       </div>
     );
   }
 }
 
-export default Code;
+export default Proficiencies;

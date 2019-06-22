@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import StackGrid from "react-stack-grid";
 
-import Header from './Header.js'
-import Footer from './Footer.js'
 import { ALBUMS } from '../content/gallery-content'
 
 
@@ -16,7 +14,6 @@ class Albums extends Component {
 
     return (
       <div>
-        <Header/>
         <StackGrid columnWidth={250} monitorImagesLoaded={true}>
           {
             Object.entries(ALBUMS).map((pair) =>
@@ -35,7 +32,6 @@ class Albums extends Component {
           src={require('../assets/footer.png')} alt={'bottom'}
           style={{width: '100%', marginTop: 50, borderRadius: 15}}
         />
-        <Footer/>
       </div>
     );
   }
