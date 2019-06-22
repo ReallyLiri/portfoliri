@@ -4,6 +4,7 @@ export const ALBUMS = {
   'drawings': {
     title: 'Paintings and Drawings',
     preview: 'https://i.imgur.com/08lQQn7.png',
+    description: 'Paintings and drawings done since 2017',
     rowHeight: 500,
     images: [
       {src: 'https://i.imgur.com/bzMabf6.jpg', height: 4, width: 3},
@@ -32,6 +33,7 @@ export const ALBUMS = {
 
   'miniatures': {
     title: 'Miniature Paintings',
+    description: 'D&D miniatures painted with acrylics',
     preview: 'https://i.imgur.com/RWnWg82.png',
     rowHeight: 300,
     images: [
@@ -55,6 +57,7 @@ export const ALBUMS = {
 
   'illustrator': {
     title: 'Intro to Illustrator',
+    description: 'Works done in the course Intro to Illustrator',
     preview: 'https://i.imgur.com/RxJ46jc.png',
     rowHeight: 500,
     images: [
@@ -65,6 +68,7 @@ export const ALBUMS = {
 
   'drawings-old': {
     title: 'Old Drawings',
+    description: 'Drawings done around 2010-2014',
     preview: 'https://i.imgur.com/Nm00cXA.png',
     rowHeight: 200,
     images: [
@@ -90,6 +94,7 @@ export const ALBUMS = {
 
   'designs-old': {
     title: 'Old Designs',
+    description: 'Old style designs ("signatures") done around 2008-2010',
     preview: 'https://i.imgur.com/LMpIjiH.png',
     rowHeight: 100,
     images: [

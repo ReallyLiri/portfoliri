@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 
-import { CenteredHeader } from './App.js'
 import { ColorScheme } from "../theme/colorScheme";
 
 class About extends Component {
   render() {
     return (
       <div>
-        <CenteredHeader>Liri Sokol</CenteredHeader>
+        <h4 style={{textAlign: 'center'}}>Liri Sokol</h4>
         <img src={require('../assets/liri.png')} alt={'liri'} style={{width: '100%', borderRadius: 15}}/>
         <div
           style={{
