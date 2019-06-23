@@ -1,9 +1,20 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 
 import { ALBUMS } from '../content/gallery-content'
 import Gallery from "react-photo-gallery";
 import { ColorScheme } from "../theme/colorScheme";
 import { NiceButton } from './Albums'
+import { lineSeparator } from './Header'
+
+const AlbumDescription = styled.div`
+text-align: center;
+font-family: Verdana;
+color: ${ColorScheme.dark};
+font-size: ${props => props.isMobile ? 14 : 26};
+font-weight: bold;
+padding-right: 20px;
+`;
 
 class Album extends Component {
 
@@ -15,12 +26,13 @@ class Album extends Component {
 
     return (
       <div>
-        <div style={{display: 'inline-flex'}}>
+        <div style={{display: 'inline-flex', alignItems: 'center'}}>
           <NiceButton onClick={() => history.push('/')}>
             <i style={{color: ColorScheme.dark}} className='fa fa-arrow-circle-left fa-fw fa-3x'/>
           </NiceButton>
-          <h4 style={{textAlign: 'center', fontFamily: 'verdana', color: ColorScheme.dark}}>{description}</h4>
+          <AlbumDescription>{description}</AlbumDescription>
         </div>
+        {lineSeparator()}
         <Gallery
           targetRowHeight={rowHeight}
           photos={images}

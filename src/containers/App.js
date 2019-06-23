@@ -13,7 +13,7 @@ const AppDiv = styled.div`
 `;
 
 const ContainerDiv = styled.div`
-  margin: 3% 17% 3% 17%;
+  margin: ${props => props.isMobile ? '3% 5% 3% 5%' : '3% 17% 3% 17%'};
   padding: 5px;
   flex: 1;
   font-family: 'Open Sans', sans-serif;
@@ -21,14 +21,39 @@ const ContainerDiv = styled.div`
   border-radius: 15px;
 `;
 
+function isMobile(width) {
+  return width <= 700;
+}
+
 class App extends Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      isMobile: isMobile(window.innerWidth),
+    };
+  }
+
+  componentWillMount() {
+    window.addEventListener('resize', this.handleWindowSizeChange);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleWindowSizeChange);
+  }
+
+  handleWindowSizeChange = () => {
+    console.warn(window.innerWidth);
+    this.setState({isMobile: isMobile(window.innerWidth)});
+  };
+
   render() {
+    console.error(`mobile? ${this.state.isMobile}`);
     return (
       <AppDiv style={{backgroundColor: ColorScheme.dark}}>
-        <ContainerDiv>
+        <ContainerDiv isMobile={this.state.isMobile}>
           <Router>
-            <RouterComponent {...this.props}/>
+            <RouterComponent isMobile={this.state.isMobile}/>
           </Router>
         </ContainerDiv>
       </AppDiv>

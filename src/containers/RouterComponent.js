@@ -16,6 +16,7 @@ class RouterComponent extends Component {
   };
 
   render() {
+    const {isMobile} = this.props;
 
     return (
       <div>
@@ -27,17 +28,27 @@ class RouterComponent extends Component {
               {...props}
             />
           )}/>
-          <Route path='/about' component={About}/>
-          <Route path='/prof' component={Proficiencies}/>
+          <Route path='/about' render={props => (
+            <About
+              {...props}
+            />
+          )}/>
+          <Route path='/prof' render={props => (
+            <Proficiencies
+              {...props}
+              isMobile={isMobile}
+            />
+          )}/>
           <Route path='/album/:album' render={props => (
             <Album
               {...props}
+              isMobile={isMobile}
             />
           )}/>
           <Redirect to='/'/>
         </Switch>
 
-        <Footer/>
+        <Footer {...this.props}/>
       </div>
     );
   }

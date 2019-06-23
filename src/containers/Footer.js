@@ -29,7 +29,7 @@ const icon = (props) => {
   return (
     <li style={{display: 'inline'}}>
       <a style={{color: ColorScheme.darker}} href={props.href} target="_blank" rel="noopener noreferrer">
-        <IconWithHover className={`fa fa-${props.faName} fa-fw fa-2x`}/>
+        <IconWithHover className={`fa fa-${props.faName} fa-fw ${props.isMobile ? '' : 'fa-2x'}`}/>
       </a>
     </li>
   )
@@ -37,15 +37,16 @@ const icon = (props) => {
 
 class Footer extends Component {
   render() {
+    const {isMobile} = this.props;
     return (
       <FooterDiv>
         <div className="row social" style={{margin: 0}}>
           <div className="col-lg-12">
             <SocialIconList>
-              {icon({href: 'mailto:reallyliri@gmail.com', faName: 'envelope'})}
-              {icon({href: 'http://www.linkedin.com/in/liri-sokol', faName: 'linkedin'})}
-              {icon({href: 'https://github.com/ReallyLiri', faName: 'github'})}
-              {icon({href: 'https://stackoverflow.com/users/1236401/mugen', faName: 'stack-overflow'})}
+              {icon({isMobile: isMobile, href: 'mailto:reallyliri@gmail.com', faName: 'envelope'})}
+              {icon({isMobile: isMobile, href: 'http://www.linkedin.com/in/liri-sokol', faName: 'linkedin'})}
+              {icon({isMobile: isMobile, href: 'https://github.com/ReallyLiri', faName: 'github'})}
+              {icon({isMobile: isMobile, href: 'https://stackoverflow.com/users/1236401/mugen', faName: 'stack-overflow'})}
             </SocialIconList>
             <br/>
           </div>
