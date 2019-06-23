@@ -6,6 +6,8 @@ import { PROFICIENCIES } from "../content/proficiencies";
 import StackGrid from "react-stack-grid";
 
 const IconWithHover = styled.i`
+color: ${ColorScheme.darker};
+font-size: 5rem;
   &:hover {
     color: ${ColorScheme.dark};
   }
@@ -41,11 +43,7 @@ const ProfContainer = styled.div`
 
 const icon = (props) => {
   return (
-    <a style={{color: ColorScheme.darker}}>
-      <IconWithHover
-        className={`devicon-${props.devicon}-plain`} style={{fontSize: '5rem'}}
-      />
-    </a>
+    <IconWithHover className={`devicon-${props.devicon}-plain`}/>
   )
 };
 
