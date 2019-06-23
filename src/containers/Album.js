@@ -8,12 +8,12 @@ import { NiceButton } from './Albums'
 import { lineSeparator } from './Header'
 
 const AlbumDescription = styled.div`
-text-align: center;
-font-family: Verdana;
-color: ${ColorScheme.dark};
-font-size: ${props => props.isMobile ? 14 : 26};
-font-weight: bold;
-padding-right: 20px;
+  text-align: center;
+  font-family: Verdana;
+  color: ${ColorScheme.dark};
+  font-size: ${props => props.isMobile ? 14 : 26};
+  font-weight: bold;
+  padding-right: 20px;
 `;
 
 class Album extends Component {

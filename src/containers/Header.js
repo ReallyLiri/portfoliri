@@ -7,7 +7,6 @@ function isActivatedLink(link) {
   return window.location.pathname === link;
 }
 
-
 const NavLink = styled(Link)`
   display: inline-flex;
   margin: 0 5px;

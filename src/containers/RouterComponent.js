@@ -26,6 +26,7 @@ class RouterComponent extends Component {
           <Route exact path='/' render={props => (
             <Albums
               {...props}
+              isMobile={isMobile}
             />
           )}/>
           <Route path='/about' render={props => (
