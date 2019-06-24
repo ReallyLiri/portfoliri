@@ -43,12 +43,10 @@ class App extends Component {
   }
 
   handleWindowSizeChange = () => {
-    console.warn(window.innerWidth);
     this.setState({isMobile: isMobile(window.innerWidth)});
   };
 
   render() {
-    console.error(`mobile? ${this.state.isMobile}`);
     return (
       <AppDiv style={{backgroundColor: ColorScheme.dark}}>
         <ContainerDiv isMobile={this.state.isMobile}>
