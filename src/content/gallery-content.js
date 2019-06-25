@@ -65,7 +65,7 @@ export const ALBUMS = {
       {src: 'https://i.imgur.com/LYWlVfN.png', height: 29, width: 41},
       {src: 'https://i.imgur.com/9jgDa9q.png', height: 68, width: 95},
       {src: 'https://i.imgur.com/vFSPnIf.png', height: 29, width: 41},
-      {src: 'https://i.imgur.com/JG0LPWf.png', height: 97, width: 52}
+      {src: 'https://i.imgur.com/9NvHG7o.png', height: 97, width: 52}
     ]
   },
 
