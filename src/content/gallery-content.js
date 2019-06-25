@@ -7,6 +7,8 @@ export const ALBUMS = {
     description: 'Paintings and drawings done since 2017',
     rowHeight: 500,
     images: [
+      {src: 'https://i.imgur.com/M5P8i6C.jpg', height: 89, width: 126},
+      {src: 'https://i.imgur.com/DtVi74M.jpg', height: 4, width: 3},
       {src: 'https://i.imgur.com/bzMabf6.jpg', height: 4, width: 3},
       {src: 'https://i.imgur.com/hZA2K3t.jpg', height: 4, width: 3},
       {src: 'https://i.imgur.com/PUvwiKM.jpg', height: 71, width: 63},
@@ -26,8 +28,7 @@ export const ALBUMS = {
       {src: 'https://i.imgur.com/cyEtahg.jpg', height: 4, width: 3},
       {src: 'https://i.imgur.com/vm7FUhP.jpg', height: 5, width: 7},
       {src: 'https://i.imgur.com/26ih5iy.jpg', height: 3, width: 4},
-      {src: 'https://i.imgur.com/3quCeuR.jpg', height: 4, width: 3},
-      {src: 'https://i.imgur.com/DtVi74M.jpg?1', height: 4, width: 3}
+      {src: 'https://i.imgur.com/3quCeuR.jpg', height: 4, width: 3}
     ]
   },
 
@@ -59,10 +60,12 @@ export const ALBUMS = {
     title: 'Intro to Illustrator',
     description: 'Works done in the course Intro to Illustrator',
     preview: 'https://i.imgur.com/RxJ46jc.png',
-    rowHeight: 500,
+    rowHeight: 650,
     images: [
       {src: 'https://i.imgur.com/LYWlVfN.png', height: 29, width: 41},
-      {src: 'https://i.imgur.com/9jgDa9q.png', height: 68, width: 95}
+      {src: 'https://i.imgur.com/9jgDa9q.png', height: 68, width: 95},
+      {src: 'https://i.imgur.com/vFSPnIf.png', height: 29, width: 41},
+      {src: 'https://i.imgur.com/JG0LPWf.png', height: 97, width: 52}
     ]
   },
 
