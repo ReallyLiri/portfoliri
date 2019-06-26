@@ -22,6 +22,16 @@ const TitleIcon = (faClass) => {
   );
 };
 
+const AboutContainer = styled.div`
+  text-align: left;
+  background-color: ${ColorScheme.dark};
+  color: ${ColorScheme.darker};
+  margin: 20px 0 20px 0;
+  padding: 15px;
+  border-radius: 15px;
+  font-family: Arial;
+`;
+
 class About extends Component {
   render() {
     return (
@@ -34,38 +44,25 @@ class About extends Component {
 
         <img src={require('../assets/liri.png')} alt={'liri'} style={{width: '100%', borderRadius: 15}}/>
 
-        <div
-          style={{
-            textAlign: 'left',
-            backgroundColor: ColorScheme.dark,
-            color: ColorScheme.darker,
-            marginTop: 20,
-            marginBottom: 20,
-            padding: 15,
-            borderRadius: 15,
-            fontFamily: 'arial'
-          }}
-        >
+        <AboutContainer>
           <p>
             My name is Liri. I am a {getAge('1992-08-20')} years old artist, designer and developer, based in Tel Aviv,
             Israel.
           </p>
           <p>
-            I graduated with a BSc in Software Engineering from the Technion and got about {getAge('2012-08-01')} years
-            of professional coding experience.
-            I'm mainly proficient with backend development, but am also very interested in modern frontend solutions and
-            cloud architecture.
+            Although my main ambition is riding on the back of a dragon towards the sunset with "Holy Diver" playing on the background, I'm compromising on being a mad (computer) scientist at day and a crazy cat person at night (more like evening, I like to sleep).
           </p>
           <p>
-            My art is a bit grotesque at times, but is meant to challenge our perception and thought.
-            I'm working towards becoming a professional graphic designer, which I hope to express using my coding
-            skills, which are also an art form.
+            I conqured the Technion (BSc Software Engineering) and am currently learning Graphic Design at HIT (not to be confused with MIT). My next target is the Unseen University.
+          </p>
+          <p>
+            My art (coding is an art too) is intended to be a bit shocking, if you weren't shocked, please try again.
           </p>
           <p>
             You can interest me with any software or art project, I'm always looking for new stuff to learn and
             practice.
           </p>
-        </div>
+        </AboutContainer>
 
         <img src={require('../assets/limonit.png')} alt={'limonit'} style={{width: '100%', borderRadius: 15}}/>
 
