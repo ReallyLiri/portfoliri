@@ -48,7 +48,7 @@ class App extends Component {
 
   render() {
     return (
-      <AppDiv style={{backgroundColor: ColorScheme.dark}}>
+      <AppDiv style={{backgroundColor: ColorScheme.darker}}>
         <ContainerDiv isMobile={this.state.isMobile}>
           <Router>
             <RouterComponent isMobile={this.state.isMobile}/>

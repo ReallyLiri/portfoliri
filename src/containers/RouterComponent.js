@@ -24,27 +24,16 @@ class RouterComponent extends Component {
 
         <Switch>
           <Route exact path='/' render={props => (
-            <Albums
-              {...props}
-              isMobile={isMobile}
-            />
+            <Albums {...props} isMobile={isMobile}/>
           )}/>
           <Route path='/about' render={props => (
-            <About
-              {...props}
-            />
+            <About {...props}/>
           )}/>
           <Route path='/prof' render={props => (
-            <Proficiencies
-              {...props}
-              isMobile={isMobile}
-            />
+            <Proficiencies {...props} isMobile={isMobile}/>
           )}/>
           <Route path='/album/:album' render={props => (
-            <Album
-              {...props}
-              isMobile={isMobile}
-            />
+            <Album {...props} isMobile={isMobile}/>
           )}/>
           <Redirect to='/'/>
         </Switch>

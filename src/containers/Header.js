@@ -11,8 +11,8 @@ const NavLink = styled(Link)`
   display: inline-flex;
   margin: 0 5px;
   padding: 10px;
-  color: ${props => isActivatedLink(props.to) ? ColorScheme.darker : ColorScheme.dark};
-  background-color: ${props => isActivatedLink(props.to) ? ColorScheme.dark : ColorScheme.darker};
+  color: ${props => isActivatedLink(props.to) ? ColorScheme.dark : ColorScheme.darker};
+  background-color: ${props => isActivatedLink(props.to) ? ColorScheme.darker : ColorScheme.dark};
   font-size: ${props => props.isMobile ? '12px' : '20px'};
   font-weight: bold;
   border-radius: 15px;
@@ -21,7 +21,7 @@ const NavLink = styled(Link)`
 
 const navSeparator = () => {
   return (
-    <i style={{color: ColorScheme.darker}} className='fa fa-dot-circle-o'/>
+    <i style={{color: ColorScheme.dark}} className='fa fa-dot-circle-o'/>
   );
 };
 
@@ -32,9 +32,9 @@ export const lineSeparator = () => {
       margin: 10,
       borderRadius: 15,
       height: 5,
-      borderColor: ColorScheme.darker,
+      borderColor: ColorScheme.dark,
       borderLeftColor: 'transparent',
-      backgroundColor: ColorScheme.darker
+      backgroundColor: ColorScheme.dark
     }}/>
   )
 };

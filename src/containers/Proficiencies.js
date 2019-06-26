@@ -8,25 +8,24 @@ import { PROFICIENCIES } from "../content/proficiencies";
 import StackGrid from "react-stack-grid";
 
 const IconWithHover = styled.i`
-  color: ${ColorScheme.darker};
+  color: ${ColorScheme.dark};
   font-size: ${props => props.isMobile ? '3rem' : '5rem'};
   &:hover {
-    color: ${ColorScheme.dark};
+    color: ${ColorScheme.darker};
   }
   margin-bottom: ${props => props.isMobile ? '12px' : '20px'};
 `;
-
 
 const SvgWithHover = styled.img`
   height: 80px;
   width: 80px;
   background-color: transparent;
   path, rect, polygon, circle {
-    fill: ${ColorScheme.darker};
+    fill: ${ColorScheme.dark};
   }
   &:hover {
     path, rect, polygon, circle {
-    fill: ${ColorScheme.dark};
+      fill: ${ColorScheme.darker};
     }
   }
   margin-bottom: ${props => props.isMobile ? '12px' : '20px'};
@@ -36,7 +35,7 @@ const Title = styled.div`
   font-size: ${props => props.isMobile ? '15px' : '18px'};
   font-weight: bold;
   padding-bottom: 20px;
-  color: ${ColorScheme.dark};
+  color: ${ColorScheme.darker};
 `;
 
 const Listed = styled.div`
@@ -45,12 +44,12 @@ const Listed = styled.div`
   font-weight: bolder;
   display: inline-block;
   margin: ${props => props.isMobile ? '12px' : '20px'};
-  color: ${ColorScheme.dark};
+  color: ${ColorScheme.darker};
 `;
 
 const ProfContainer = styled.div`
   border-radius: 50%;
-  background-color: ${ColorScheme.darker};
+  background-color: ${ColorScheme.dark};
   height: ${props => props.isMobile ? '120px' : '150px'};
   width: ${props => props.isMobile ? '120px' : '150px'};
   text-align: center;
@@ -71,7 +70,8 @@ const svgicon = (props) => {
   )
 };
 
-function jqueryFix() {
+function fixImgToSvgElements() {
+  // Used to convert image with svg source to a proper svg element, in order to be able to override style:fill from scss
   // https://stackoverflow.com/questions/11978995/how-to-change-color-of-svg-image-using-css-jquery-svg-image-replacement/35126817#35126817
   $(document).ready(function () {
     $('img[src$=".svg"]').each(function () {
@@ -101,7 +101,7 @@ function jqueryFix() {
 class Proficiencies extends Component {
 
   componentDidMount() {
-    jqueryFix();
+    fixImgToSvgElements();
   }
 
   render() {
@@ -110,15 +110,18 @@ class Proficiencies extends Component {
       <div>
         {
           Object.entries(PROFICIENCIES).map((pair) => {
+            const name = pair[0];
+            const profList = pair[1];
             return (
-              <div key={pair[0]} style={{padding: 20}}>
-                <Title isMobile={isMobile}>{pair[0]}</Title>
+              <div key={name} style={{padding: 20}}>
+                <Title isMobile={isMobile}>{name}</Title>
                 <StackGrid columnWidth={isMobile ? 140 : 200}>
                   {
-                    pair[1].map((prof) => {
+                    profList.map((prof) => {
                       return (
                         <ProfContainer isMobile={isMobile} key={prof.name}>
                           <Listed isMobile={isMobile}>{prof.name}</Listed><br/>
+                          { /* We get the icon from either devicon (the easy way) or svg asset */ }
                           {prof.devicon && devicon({isMobile: isMobile, devicon: prof.devicon})}
                           {prof.svg && svgicon({isMobile: isMobile, svg: prof.svg})}
                         </ProfContainer>

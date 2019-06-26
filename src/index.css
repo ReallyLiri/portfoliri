@@ -5,6 +5,7 @@ body {
   font-family: sans-serif;
 }
 
+/* The following is used to disable accessibility markings (blue background) on click in touch screens */
 .no-select {
     -webkit-touch-callout: none;
     -webkit-user-select: none;

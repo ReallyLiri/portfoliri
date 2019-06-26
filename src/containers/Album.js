@@ -10,7 +10,7 @@ import { lineSeparator } from './Header'
 const AlbumDescription = styled.div`
   text-align: center;
   font-family: Verdana;
-  color: ${ColorScheme.dark};
+  color: ${ColorScheme.darker};
   font-size: ${props => props.isMobile ? 14 : 26};
   font-weight: bold;
   padding-right: 20px;
@@ -28,7 +28,7 @@ class Album extends Component {
       <div>
         <div style={{display: 'inline-flex', alignItems: 'center'}}>
           <NiceButton onClick={() => history.push('/')}>
-            <i style={{color: ColorScheme.dark}} className='fa fa-arrow-circle-left fa-fw fa-3x'/>
+            <i style={{color: ColorScheme.darker}} className='fa fa-arrow-circle-left fa-fw fa-3x'/>
           </NiceButton>
           <AlbumDescription>{description}</AlbumDescription>
         </div>

@@ -19,7 +19,7 @@ const SocialIconList = styled.ul`
 
 const IconWithHover = styled.i`
   &:hover {
-    color: ${ColorScheme.dark}
+    color: ${ColorScheme.darker}
     transition: all .3s ease;
     transform: scale(1.1) translateY(-5px);
   }
@@ -28,7 +28,7 @@ const IconWithHover = styled.i`
 const icon = (props) => {
   return (
     <li style={{display: 'inline'}}>
-      <a style={{color: ColorScheme.darker}} href={props.href} target="_blank" rel="noopener noreferrer">
+      <a style={{color: ColorScheme.dark}} href={props.href} target="_blank" rel="noopener noreferrer">
         <IconWithHover className={`fa fa-${props.faName} fa-fw ${props.isMobile ? '' : 'fa-2x'}`}/>
       </a>
     </li>
