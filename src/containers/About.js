@@ -53,7 +53,7 @@ class About extends Component {
             Although my main ambition is riding on the back of a dragon towards the sunset with "Holy Diver" playing on the background, I'm compromising on being a mad (computer) scientist at day and a crazy cat person at night (more like evening, I like to sleep).
           </p>
           <p>
-            I conqured the Technion (BSc Software Engineering) and am currently learning Graphic Design at HIT (not to be confused with MIT). My next target is the Unseen University.
+            I conquered the Technion (BSc Software Engineering) and am currently learning Graphic Design at HIT (not to be confused with MIT). My next target is the Unseen University.
           </p>
           <p>
             My art (coding is an art too) is intended to be a bit shocking, if you weren't shocked, please try again.
