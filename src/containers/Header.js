@@ -45,18 +45,18 @@ class Header extends Component {
     const {isMobile} = this.props;
     return (
       <div style={{textAlign: 'center'}}>
-        <Link to="/" style={{cursor: 'pointer'}}>
+        <Link className="no-select" to="/" style={{cursor: 'pointer'}}>
           <img
             src={require('../assets/toptext.png')} alt='Really Liri'
             style={{width: (isMobile ? '90%' : '65%'), marginBottom: 20}}
           />
         </Link>
         <div>
-          <NavLink to='/about' isMobile={isMobile}>ABOUT</NavLink>
+          <NavLink className="no-select" to='/about' isMobile={isMobile}>ABOUT</NavLink>
           {navSeparator()}
-          <NavLink to='/prof' isMobile={isMobile}>PROFICIENCIES</NavLink>
+          <NavLink className="no-select" to='/prof' isMobile={isMobile}>PROFICIENCIES</NavLink>
           {navSeparator()}
-          <NavLink to='/' isMobile={isMobile}>GALLERY</NavLink>
+          <NavLink className="no-select" to='/' isMobile={isMobile}>GALLERY</NavLink>
         </div>
         {lineSeparator()}
       </div>

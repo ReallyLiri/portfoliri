@@ -8,7 +8,7 @@ export const ALBUMS = {
     rowHeight: 500,
     images: [
       {src: 'https://i.imgur.com/M5P8i6C.jpg', height: 89, width: 126},
-      {src: 'https://i.imgur.com/DtVi74M.jpg', height: 4, width: 3},
+      {src: 'https://i.imgur.com/bWSyOBx.jpg', height: 59, width: 45},
       {src: 'https://i.imgur.com/bzMabf6.jpg', height: 4, width: 3},
       {src: 'https://i.imgur.com/hZA2K3t.jpg', height: 4, width: 3},
       {src: 'https://i.imgur.com/PUvwiKM.jpg', height: 71, width: 63},

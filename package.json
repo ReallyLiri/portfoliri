@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "add": "^2.0.6",
+    "add": "2.0.6",
     "font-awesome": "4.7.0",
-    "prop-types": "^15.7.2",
+    "jquery": "3.4.1",
+    "prop-types": "15.7.2",
     "react": "16.8.6",
     "react-dom": "16.8.6",
     "react-photo-gallery": "7.0.2",
@@ -14,7 +15,7 @@
     "react-scripts": "3.0.1",
     "react-stack-grid": "0.7.1",
     "styled-components": "4.3.1",
-    "yarn": "^1.16.0"
+    "yarn": "1.16.0"
   },
   "scripts": {
     "start": "react-scripts start",
