@@ -3,8 +3,6 @@ import styled from 'styled-components';
 
 import { ColorScheme } from "../theme/colorScheme";
 
-const getAge = birthDate => Math.floor((new Date() - new Date(birthDate).getTime()) / 3.15576e+10);
-
 const TitleText = styled.div`
   white-space: nowrap;
   text-align: center;
@@ -46,25 +44,19 @@ class About extends Component {
 
         <AboutContainer>
           <p>
-            My name is Liri. I am a {getAge('1992-08-20')} years old artist, designer and developer, based in Tel Aviv,
-            Israel.
+            Artist | Designer | Developer
           </p>
           <p>
-            Although my main ambition is riding on the back of a dragon towards the sunset with "Holy Diver" playing on the background, I'm compromising on being a mad (computer) scientist at day and a crazy cat person at night (more like evening, I like to sleep).
+            Although my main ambition is riding on the back of a dragon towards the sunset, "Holy Diver" playing on the
+            background, I'm compromising on being a mad (computer) scientist at day and a applying the shapes of my mind
+            to the materialized world at night.
           </p>
           <p>
-            I conquered the Technion (BSc Software Engineering) and am currently learning Graphic Design at HIT (not to be confused with MIT). My next target is the Unseen University.
-          </p>
-          <p>
-            My art (coding is an art too) is intended to be a bit shocking, if you weren't shocked, please try again.
-          </p>
-          <p>
-            You can interest me with any software or art project, I'm always looking for new stuff to learn and
-            practice.
+            I believe we live in the best of all possible worlds, that we are all part of a hive with one a collective
+            mind and that our perception has the power to shape the very core of existence. Oh, and cats rule the world.
+            Of course.
           </p>
         </AboutContainer>
-
-        <img src={require('../assets/limonit.png')} alt={'limonit'} style={{width: '100%', borderRadius: 15}}/>
 
       </div>
     );
