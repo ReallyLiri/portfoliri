@@ -36,7 +36,10 @@ class Album extends Component {
         <Gallery
           targetRowHeight={rowHeight}
           photos={images}
-          onClick={(event, obj) => window.open(images[obj.index].src, "_self")}
+          onClick={(event, obj) => {
+            const newTab = window.open(images[obj.index].src, "_blank");
+            newTab.focus();
+          }}
         />
       </div>
     );
