@@ -17,8 +17,8 @@ const IconWithHover = styled.i`
 `;
 
 const SvgWithHover = styled.img`
-  height: 80px;
-  width: 80px;
+  height: ${props => props.isMobile ? '48px' : '80px'};
+  width: ${props => props.isMobile ? '48px' : '80px'};
   background-color: transparent;
   path, rect, polygon, circle {
     fill: ${ColorScheme.dark};
@@ -43,7 +43,10 @@ const Listed = styled.div`
   font-family: "Courier New";
   font-weight: bolder;
   display: inline-block;
-  margin: ${props => props.isMobile ? '12px' : '20px'};
+  vertical-align: bottom;
+  padding-top: 10px;
+  height: 35px;
+  width: ${props => props.isMobile ? '80px' : '100px'};
   color: ${ColorScheme.darker};
 `;
 

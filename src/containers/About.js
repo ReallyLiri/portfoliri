@@ -48,11 +48,11 @@ class About extends Component {
           </p>
           <p>
             Although my main ambition is riding on the back of a dragon towards the sunset, "Holy Diver" playing on the
-            background, I'm compromising on being a mad (computer) scientist at day and a applying the shapes of my mind
+            background, I'm compromising on being a mad (computer) scientist at day and applying the shapes of my mind
             to the materialized world at night.
           </p>
           <p>
-            I believe we live in the best of all possible worlds, that we are all part of a hive with one a collective
+            I believe we live in the best of all possible worlds, that we are all a part of a hive with one a collective
             mind and that our perception has the power to shape the very core of existence. Oh, and cats rule the world.
             Of course.
           </p>
