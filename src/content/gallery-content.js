@@ -1,4 +1,3 @@
-
 export const ALBUMS = {
 
   'drawings': {
@@ -60,12 +59,15 @@ export const ALBUMS = {
     title: 'Intro to Illustrator',
     description: 'Works done in the course Intro to Illustrator',
     preview: 'https://i.imgur.com/RxJ46jc.png',
-    rowHeight: 650,
+    rowHeight: 500,
     images: [
       {src: 'https://i.imgur.com/LYWlVfN.png', height: 29, width: 41},
       {src: 'https://i.imgur.com/9jgDa9q.png', height: 68, width: 95},
-      {src: 'https://i.imgur.com/vFSPnIf.png', height: 29, width: 41},
-      {src: 'https://i.imgur.com/9NvHG7o.png', height: 97, width: 52}
+      {src: 'https://i.imgur.com/MMLIoxq.png', height: 41, width: 29},
+      {src: 'https://i.imgur.com/w6EirNb.png', height: 93, width: 91},
+      {src: 'https://i.imgur.com/gpoN6pc.png', height: 52, width: 97},
+      {src: 'https://i.imgur.com/lKStuQm.png', height: 1, width: 1},
+      {src: 'https://i.imgur.com/74KTAg0.png', height: 41, width: 29}
     ]
   },
 
