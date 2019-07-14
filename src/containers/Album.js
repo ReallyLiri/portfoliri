@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-import { ALBUMS } from '../content/gallery-content'
+import { getGalleryAlbums } from '../content/gallery-content'
 import Gallery from "react-photo-gallery";
 import { ColorScheme } from "../theme/colorScheme";
 import { NiceButton } from './Albums'
 import { lineSeparator } from './Header'
+import { loadingPlaceholder } from "../content/loading";
 
 const AlbumDescription = styled.div`
   text-align: center;
@@ -18,11 +19,28 @@ const AlbumDescription = styled.div`
 
 class Album extends Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      isReady: false,
+      albums: null
+    }
+  }
+
+  async componentDidMount() {
+    const albums = await getGalleryAlbums();
+    this.setState({isReady: true, albums: albums});
+  }
+
   render() {
+
+    if (!this.state.isReady) {
+      return loadingPlaceholder();
+    }
 
     const {history} = this.props;
     const {album} = this.props.match.params;
-    const {images, rowHeight, description} = ALBUMS[album];
+    const {images, rowHeight, description} = this.state.albums[album];
 
     return (
       <div>

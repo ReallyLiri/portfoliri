@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import StackGrid from "react-stack-grid";
 import styled from 'styled-components';
 
-import { ALBUMS } from '../content/gallery-content'
+import { getGalleryAlbums } from '../content/gallery-content'
+import { loadingPlaceholder } from "../content/loading";
 
 export const NiceButton = styled.button`
   background-color: transparent;
@@ -14,9 +15,24 @@ export const NiceButton = styled.button`
 
 class Albums extends Component {
 
-  albums = null;
+  constructor(props) {
+    super(props);
+    this.state = {
+      isReady: false,
+      albums: null
+    }
+  }
+
+  async componentDidMount() {
+    const albums = await getGalleryAlbums();
+    this.setState({isReady: true, albums: albums});
+  }
 
   render() {
+
+    if (!this.state.isReady) {
+      return loadingPlaceholder();
+    }
 
     const {history, isMobile} = this.props;
 
@@ -24,14 +40,14 @@ class Albums extends Component {
       <div>
         <StackGrid columnWidth={isMobile ? 150 : 250} monitorImagesLoaded={true}>
           {
-            Object.entries(ALBUMS).map((pair) =>
+            Object.entries(this.state.albums).map((pair) =>
               <NiceButton
                 key={pair[0]}
                 style={{margin: 5}}
                 onClick={() => history.push(`/album/${pair[0]}`)}
               >
                 <img src={pair[1].preview} alt={pair[0]}
-                     style={{height: isMobile ? '80%': '100%', width: isMobile ? '80%': '100%'}}
+                     style={{height: isMobile ? '80%' : '100%', width: isMobile ? '80%' : '100%'}}
                 />
                 {isMobile ? <h5>{pair[1].title}</h5> : <h2>{pair[1].title}</h2>}
               </NiceButton>

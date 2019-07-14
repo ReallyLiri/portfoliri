@@ -23,6 +23,34 @@ To build the project run `yarn build`, output will be written to the local `buil
 
 When pushing to `master` branch, the site is automatically built and published using [Netlify](https://www.netlify.com/).
 
+## Configuration
+
+Content is highly configurable.
+
+Proficiencies are taken from static configuration at [proficiencies.js](./src/content/proficiencies.js).
+
+Albums are taken from [jsonbin.io](https://jsonbin.io) hosted JSON, in the following schema:
+
+```json
+{
+    "<album-name>": {
+        "images": [
+            {
+                "width": x,
+                "height": y,
+                "src": "https://i.imgur.com/xxx.png"
+            },
+            ...
+        ],
+        "rowHeight": z,
+        "preview": "https://i.imgur.com/xxx.png",
+        "description": "<desc>"
+        "title": "<title>"
+    },
+    ...
+}
+```
+
 ## License
 
 The code is licensed under `MIT` and is free to use. However, all rights are reserved on the gallery content and any other non-code properties.
