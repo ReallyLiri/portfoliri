@@ -7,6 +7,11 @@ import styled from "styled-components";
 import { PROFICIENCIES } from "../content/proficiencies";
 import StackGrid from "react-stack-grid";
 
+const _iOSDevice = !!navigator.platform.match(/iPhone|iPod|iPad/);
+
+const iOSIconStyleFix = _iOSDevice ? {cursor: 'pointer'} : {};
+
+
 const IconWithHover = styled.i`
   color: ${ColorScheme.dark};
   font-size: ${props => props.isMobile ? '3rem' : '5rem'};
@@ -63,13 +68,13 @@ const ProfContainer = styled.div`
 
 const devicon = (props) => {
   return (
-    <IconWithHover {...props} className={`devicon-${props.devicon}-plain`}/>
+    <IconWithHover {...props} className={`devicon-${props.devicon}-plain`} style={iOSIconStyleFix}/>
   )
 };
 
 const svgicon = (props) => {
   return (
-    <SvgWithHover className="svg" src={require(`../assets/${props.svg}-plain.svg`)} alt={props.svg}/>
+    <SvgWithHover className="svg" src={require(`../assets/${props.svg}-plain.svg`)} alt={props.svg} style={iOSIconStyleFix}/>
   )
 };
 
