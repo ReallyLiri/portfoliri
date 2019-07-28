@@ -19,7 +19,7 @@ export async function getGalleryAlbums() {
     }
   };
 
-  galleryContent = await fetch(`https://api.jsonbin.io/b/${BIN_ID}`, requestSettings)
+  galleryContent = await fetch(`https://api.jsonbin.io/b/${BIN_ID}/latest`, requestSettings)
     .then(response => response.json())
     .then(json => {
       return json;
