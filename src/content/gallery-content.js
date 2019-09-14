@@ -1,5 +1,5 @@
 
-const BIN_ID = '5d2aec8026f5027360f28832';
+const BIN_ID = '5d7cec24371673119faabcf6';
 const SECRET_KEY = '$2a$10$Phw/49LD4zdf8SxYs/XLo.xtM0XUdwAstQHolCW/KaPkZpJW9IIxu';
 
 let galleryContent = null;
