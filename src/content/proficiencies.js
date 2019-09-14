@@ -11,8 +11,6 @@ export const PROFICIENCIES = {
 
   'Backend Libraries': [
     {name: '.NET', devicon: 'dot-net'},
-    {name: 'Owin', devicon: 'dot-net'},
-    {name: 'WCF', devicon: 'dot-net'},
     {name: 'Entity Framework', devicon: 'dot-net'},
     {name: 'Flask', svg: 'flask'},
     {name: 'SQLAlchemy', svg: 'sqlalchemy'},
@@ -36,7 +34,8 @@ export const PROFICIENCIES = {
 
   'Web Server': [
     {name: 'NGINX', devicon: 'nginx'},
-    {name: 'uWSGI', svg: 'uwsgi'}
+    {name: 'uWSGI', svg: 'uwsgi'},
+    {name: 'ASP.NET', devicon: 'dot-net'}
   ],
 
   'Tools': [
@@ -58,7 +57,9 @@ export const PROFICIENCIES = {
     {name: 'SQL-Server', svg: 'sqlserver'},
     {name: 'Redis', devicon: 'redis'},
     {name: 'rocksdb', svg: 'rocksdb'},
-    {name: 'FireBase', svg: 'firebase'}
+    {name: 'FireBase', svg: 'firebase'},
+    {name: 'MongoDB', devicon: 'mongodb'},
+    {name: 'Neo4j', svg: 'neo4j'}
   ],
 
   'Design': [
