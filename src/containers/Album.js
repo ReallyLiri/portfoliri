@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import styled from 'styled-components';
 
-import { getGalleryAlbums } from '../content/gallery-content'
+import {getGalleryAlbums} from '../content/gallery-content'
 import Gallery from "react-photo-gallery";
-import { ColorScheme } from "../theme/colorScheme";
-import { NiceButton } from './Albums'
-import { lineSeparator } from './Header'
-import { loadingPlaceholder } from "../content/loading";
+import {ColorScheme} from "../theme/colorScheme";
+import {NiceButton} from './Albums'
+import {lineSeparator} from './Header'
+import {loadingPlaceholder} from "../content/loading";
 
 const AlbumDescription = styled.div`
   text-align: center;
@@ -40,7 +40,7 @@ class Album extends Component {
 
     const {history} = this.props;
     const {album} = this.props.match.params;
-    const {images, rowHeight, description} = this.state.albums[album];
+    const {images, rowHeight, description, links} = this.state.albums[album];
 
     return (
       <div>
@@ -50,6 +50,14 @@ class Album extends Component {
           </NiceButton>
           <AlbumDescription>{description}</AlbumDescription>
         </div>
+        {
+          links && links.length ? <AlbumDescription style={{textAlign: "left", paddingLeft: 58, lineHeight: 2}}>
+            See also:<br/>
+            {
+              links.map(link => {return <a href={link}>{link}<br/></a>})
+            }
+          </AlbumDescription> : null
+        }
         {lineSeparator()}
         <Gallery
           targetRowHeight={rowHeight}
