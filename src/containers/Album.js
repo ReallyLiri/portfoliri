@@ -17,6 +17,10 @@ const AlbumDescription = styled.div`
   padding-right: 20px;
 `;
 
+const Link = styled.a`
+  color: ${ColorScheme.dark};
+`;
+
 class Album extends Component {
 
   constructor(props) {
@@ -54,7 +58,7 @@ class Album extends Component {
           links && links.length ? <AlbumDescription style={{textAlign: "left", paddingLeft: 58, lineHeight: 2}}>
             See also:<br/>
             {
-              links.map(link => {return <a href={link}>{link}<br/></a>})
+              links.map(link => {return <Link target="_blank" rel="noopener noreferrer" href={link}>{link}<br/></Link>})
             }
           </AlbumDescription> : null
         }
