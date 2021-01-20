@@ -45,6 +45,14 @@ class Album extends Component {
     const {history} = this.props;
     const {album} = this.props.match.params;
     const {images, rowHeight, description, links} = this.state.albums[album];
+    for (const image of images) {
+      let {src} = image;
+      src = src.replace("i.", "").split('?')[0];
+      image.srcorig = src;
+      const parts = src.split('.');
+      parts[parts.length - 2] += "l";
+      image.src = parts.join('.');
+    }
 
     return (
       <div>
@@ -67,7 +75,7 @@ class Album extends Component {
           targetRowHeight={rowHeight}
           photos={images}
           onClick={(event, obj) => {
-            const newTab = window.open(images[obj.index].src, "_blank");
+            const newTab = window.open(images[obj.index].srcorig, "_blank");
             newTab.focus();
           }}
         />
